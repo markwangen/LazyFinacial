@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="free.mark.lazyfinacial"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <uses-library android:name="android.test.runner" />
+        <activity
+            android:name="free.mark.lazyfinacial.FullscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/FullscreenTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="free.mark.lazyfinacial.AssetDetailActivity"
+            android:label="@string/asset_details"
+            android:theme="@android:style/Theme.Holo.NoActionBar">
+        </activity>
+        <activity
+            android:name="free.mark.lazyfinacial.UpdateAssetActivity"
+            android:label="@string/update_asset"
+            android:parentActivityName="free.mark.lazyfinacial.AssetDetailActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="free.mark.lazyfinacial.AssetDetailActivity" />
+        </activity>
+    </application>
+
+    <instrumentation android:targetPackage="free.mark.lazyfinacial" 
+        android:name="android.test.InstrumentationTestRunner" />
+</manifest>

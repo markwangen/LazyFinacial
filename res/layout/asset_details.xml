@@ -1,0 +1,114 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_overlay"
+    tools:context=".AssetDetailActivity" >
+
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc.
+    -->
+
+    <!--
+         This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/total_asset_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="31dp"
+            android:layout_marginTop="48dp"
+            android:text="@string/total_asset"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/total_asset_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/total_asset_label"
+            android:layout_alignBottom="@+id/total_asset_label"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@+id/total_asset_label"
+            android:text="10000.00"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/last_month_increase_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/last_month_increase_label"
+            android:layout_alignBottom="@+id/last_month_increase_label"
+            android:layout_alignLeft="@+id/total_asset_text"
+            android:text="500"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/average_increase_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/average_increase_label"
+            android:layout_alignBottom="@+id/average_increase_label"
+            android:layout_alignLeft="@+id/last_month_increase_text"
+            android:text="600"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/last_month_increase_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/total_asset_label"
+            android:layout_toLeftOf="@+id/total_asset_text"
+            android:text="@string/last_month_increase"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/average_increase_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/last_month_increase_label"
+            android:layout_toLeftOf="@+id/total_asset_text"
+            android:text="@string/average_increase"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/update_date_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/average_increase_label"
+            android:layout_toLeftOf="@+id/total_asset_text"
+            android:text="@string/update_date"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/Button"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:onClick="updateAsset"
+            android:layout_toRightOf="@+id/update_date_label"
+            android:text="Button" />
+
+        <TextView
+            android:id="@+id/last_update_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/update_date_label"
+            android:layout_alignBottom="@+id/update_date_label"
+            android:layout_alignLeft="@+id/average_increase_text"
+            android:text="2013年5月5日"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
+
+</FrameLayout>
